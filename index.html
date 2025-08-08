@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fear & Hunger</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Creepster&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="game-area-container">
+
+        <div id="start-screen">
+            <h1>FEAR & HUNGER ZER0</h1>
+            <p class="lore-text">
+                Perdido em uma masmorra amaldiçoada por seus atos sombrios, você busca a luz. 
+                Neste lugar, os inimigos são impiedosos e hostis. A única esperança é encontrar a saída
+                e escapar antes que a escuridão o consuma.
+            </p>
+            <button id="startGameButton">Começar Jogo</button>
+            <div class="instructions">
+                <h3>Controles</h3>
+                <p><strong>Movimento:</strong> W, A, S, D</p>
+                <p><strong>Atirar:</strong> Setas</p>
+            </div>
+        </div>
+
+        <div id="game-container" class="hidden">
+            <canvas id="gameCanvas" width="600" height="600"></canvas>
+            <div id="status">
+                <p>Fase: <span id="fase">1</span></p>
+                <p>Vidas: <span id="vidas">3</span></p>
+                <p id="message"></p>
+            </div>
+        </div>
+        
+        <div id="end-screen" class="hidden">
+            <h2 class="end-title">A saída..</h2>
+            <p class="end-lore">
+                Você viu uma luz, mas nela só havia mais escuridão. 
+                Talvez você devesse aceitar que não há esperança nas masmorras. 
+                Talvez você sempre soube... agora só lhe resta medo e fome.
+            </p>
+            <button id="restartButton">Tentar de novo?</button>
+        </div>
+
+        <div id="game-over-screen" class="hidden">
+            <h2 class="end-title">Você Falhou</h2>
+            <p class="end-lore">
+                Você nunca escapará das masmorras.
+                A fome e o medo te consumiram.
+            </p>
+            <button id="gameOverRestartButton">Tentar Novamente</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
